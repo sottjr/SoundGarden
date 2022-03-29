@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="blackB">
     <header class=" d-flex justify-content-center align-items-center">
-        <img src="img/Sound-logo (1).png" width="300" alt="">
+        <img src="img/Sound-logo-white (1).png" width="300" alt="">
     </header>
 
     <main class="d-flex flex-column">
-        <section class="d-flex justify-content-center" style="background-color: #F8BBD0; color: #fff; padding: 50px;">
+        <section class="d-flex justify-content-center" style="background-color: #17161bbd; color: rgb(204, 204, 204); padding: 50px;">
 
             <div style="width:max-content;" id="carouselExampleIndicators" class="carousel carousel-fade"
                 data-bs-ride="carousel">
@@ -80,12 +80,12 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="validationCustom04" class="form-label">Evento</label>
+                                <label for="validationCustom04" class="form-label">Ingressos</label>
                                 <select class="form-select" id="validationCustom04" required>
-                                    <option selected disabled value="1">Escolha:</option>
-                                    <option selected value="1">O Rappa</option>
-                                    <option selected value="2">Lollapalooza</option>
-                                    <option selected value="3">Iron Maiden</option>
+                                    <option selected disabled value="1">Selecione um evento:</option>
+                                    <option selected value="">Evento 1</option>
+                                    <option selected value="">Evento 2</option>
+                                    <option selected value="">Evento 3</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
@@ -93,19 +93,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="validationCustom04" class="form-label">Quantidade</label>
-                                <select class="form-select" id="validationCustom04" required>
-                                    <option selected disabled value="1">Escolha:</option>
-                                    <option selected value="1">1</option>
-                                    <option selected value="2">2</option>
-                                    <option selected value="3">3</option>
-                                    <option selected value="4">4</option>
-                                    <option selected value="5">5</option>
-                                    <option selected value="5">6</option>
-                                    <option selected value="5">7</option>
-                                    <option selected value="5">8</option>
-                                    <option selected value="5">9</option>
-                                    <option selected value="5">10</option>
-                                </select>
+                                <input type="number" name="Quantidade" class="form-control" id="validationCustom04" >
                                 <div class="invalid-feedback">
                                     Selecione algo válido
                                 </div>
@@ -125,7 +113,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
-                        <button type="button" class="btn btn-primary">concluir reserva</button>
+                        <button type="button" class="btn bg border-0 bg-dark btn-primary">concluir reserva</button>
                     </div>
                 </div>
             </div>
@@ -133,43 +121,43 @@
 
         <!--Cards de Eventos-->
         <section style="padding: 50px; margin-top: 50px;">
-            <div class="container text-center">
+            <div class="container text-center" style="color: #555;">
                 <h2>Próximos eventos</h2>
             </div>
             <div class="container d-flex justify-content-center align-items-center">
                 <article style="max-width: max-content;" class="evento card p-4 m-5" id="mobile">
                     <h2>Iron Maiden</h2>
-                    <h3 style="background-color: #F8BBD0;">05/03/2022</h3>
+                    <h3 style="background-color: #000; color: white;">05/03/2022</h3>
                     <h4>Iron Maiden, The Kooks, Hiatus Kaiyote</h4>
                     <p class="ocult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo
                         similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <button type="button" class="btn btn-primary bg-danger border-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         reservar ingresso
                     </button>
                 </article>
                 <article id="remove" style="max-width: max-content;" class="evento card p-4 m-5" id="mobile">
                     <h2>Lollapalooza </h2>
-                    <h3 style="background-color: #F8BBD0;">05/03/2022</h3>
+                    <h3 style="background-color: #000; color: white;">05/03/2022</h3>
                     <h4>Lollapalooza, The Kooks, Hiatus Kaiyote</h4>
                     <p class="ocult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo
                         similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <button type="button" class="btn btn-primary bg-danger border-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         reservar ingresso
                     </button>
                 </article>
                 <article style="max-width: max-content;" class="evento card p-4 m-5" id="mobile">
                     <h2>O Rappa </h2>
-                    <h3 style="background-color: #F8BBD0;">05/03/2022</h3>
+                    <h3 style="background-color: #000; color: white;">05/03/2022</h3>
                     <h4>O Rappa, The Kooks, Hiatus Kaiyote</h4>
                     <p class="ocult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo
                         similique,
                         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                         nobis in inventore tenetur asperiores.</p>
-                    <button type="button" class="btn btn-primary bg-danger border-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         reservar ingresso
                     </button>
                 </article>
@@ -179,12 +167,11 @@
             </div>
         </section>
         <!--Section-->
-        <section style="padding: 50px; margin-top: 50px;"
-            class="d-flex justify-content-center align-items-center bg-light"
-            style="background-color: #f2f2f2; color: #555">
-            <div class="container">
-                <div id="mobileSession" class="row d-flex justify-content-center align-items-center">
-                    <div class="col">
+        <section style="padding: 50px; margin-top: 50px; "
+            class="d-flex justify-content-center align-items-center bg-dark">
+            <div class="container " style="background-color: rgba(153, 153, 153, 0.178); border-radius: 20px; padding: 50px;">
+                <div id="mobileSession" class="row d-flex justify-content-center align-items-center" style="width: 100%;">
+                    <div class="col" style="color: aliceblue;" >
                         <h2>A Sound Garden</h2>
 
                         <p>Sound Garden é uma casa de show super descolada</p>
@@ -214,7 +201,7 @@
     <footer style="margin-top: 10px;">
         <div class="container d-flex justify-content-center align-items-center">
             <a href="#">
-                <img src="img/Sound-logo-black (1).png" width="200px" alt="">
+                <img src="img/Sound-logo-white (1).png" width="200px" alt="">
             </a>
             <nav>
                 <ul>

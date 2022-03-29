@@ -15,9 +15,13 @@
         display: none;
     } p {
         font-size: 21px;
-        text-decoration: black;
-        font-weight: bold;
+        text-decoration: rgb(199, 195, 195);
+        font-weight:500;
     }
+}
+
+.blackB {
+    background-color: #000000;
 }
 
 
@@ -27,25 +31,27 @@ body{
     font-family: 'Questrial', sans-serif;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .foot {
     text-decoration: none;
-    color: #000000;
+    color: #fff8f8;
 }
 
 .foot:hover {
     transition: 0.9s;
-    color: #ffffff;
-    background-color: #000000;
-    padding: 4px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 5px;
     border-radius: 10px;
 }
 
 button:hover {
-    transition: 00.9s;
+    transition: 00.10s;
     background-color: rgba(73, 71, 71, 0.308);
-    border-radius:  20px;
+    border-radius:  10px;
+    padding: 3.33%;
 }
 
 .img-responsive {
@@ -56,7 +62,7 @@ header {
     position: relative;
     box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 27%);
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(0, 0, 0);
 }
 aside {
     min-height: 100vh;
@@ -83,6 +89,12 @@ section.full{
 
 article.evento {
     width: 350px;
+}
+
+footer {
+    background-color: #000000;
+    text-decoration: #ffffff;
+    
 }
 
 footer nav ul{
