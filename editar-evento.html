@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <aside style="margin-top: 25px;" class="d-flex flex-column flex-shrink-0 p-0 col-2">
+            <aside id="remove" class="text-danger bg-dark flex-column flex-shrink-0 p-0 col-2">
 
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
@@ -29,34 +29,16 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="/admin.html" class="nav-link active" aria-current="page">
+                        <a href="#" class="nav-link active" aria-current="page">
                             Eventos
                         </a>
                     </li>
-
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                            Funcionários
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                            Usuários
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="nav-link link-dark">
-                            Landing Page
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="nav-link link-dark">
+                     <li>
+                        <a href="reservas.html" class="nav-link link-dark text-danger">
                             Reservas
                         </a>
                     </li>
                 </ul>
-
-
             </aside>
             <main style="margin-left: 30px;" class="col-9  p-5">
                 <div class="my-5">
@@ -64,7 +46,7 @@
                 </div>
                 <div>
                     <!-- - cadastro de evento (nome, atrações, descrição, horário, data, numero de ingressos) -->
-                    <form class="col-9">
+                    <form class="col-9 w-100">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="nome" aria-describedby="nome">
@@ -92,7 +74,10 @@
                             <label for="lotacao" class="form-label">Lotação (número de ingressos disponiveis)</label>
                             <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao">
                         </div>
-                        <button type="submit" class="btn btn-primary" id="#btSend">enviar</button>
+                        <div class="d-flex w-100">
+                        <button type="submit" class="btn btn-primary m-2 " id="btSend">Concluir</button>
+                        <a href="admin.html" class="btn btn-primary m-2 ">Voltar ao Painel</a>
+                    </div>
                     </form>
                 </div>
             </main>

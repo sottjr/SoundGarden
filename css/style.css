@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 @media (max-width: 1000px) {
-    body header p #sessionGarden {
+    body header p {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content:center;
-        font-weight: bold;
+        
     } #mobileSession {
         flex-direction: column;
     }  #remove {
         display: none;
+    }  aside {
+        display: none;
+    } p {
+        font-size: 21px;
+        text-decoration: black;
+        font-weight: bold;
     }
 }
 
