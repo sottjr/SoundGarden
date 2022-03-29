@@ -13,7 +13,7 @@ let listEvents = async () => {
         table.innerHTML+= 
         `
         <tr>
-                                <th scope="row">${index+4}</th>
+                                <th scope="row">${index+1}</th>
                                 <td id="remove">${item.scheduled}</td>
                                 <td>${item.name}</td>
                                 <td id="remove">${item.attractions}</td>
