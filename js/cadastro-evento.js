@@ -39,5 +39,6 @@ form.onsubmit = async (evento) => {
     console.log(contentAnswer)
 
     alert("Evento cadastrado")
+    return window.location.href = 'admin.html'
 
 }
