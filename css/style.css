@@ -47,11 +47,14 @@ body{
     border-radius: 10px;
 }
 
-button:hover {
-    transition: 00.10s;
-    background-color: rgba(73, 71, 71, 0.308);
+
+.hover:hover {
+    transition: 01.0s;
+    background-color:#C2185B;
+    border: 0cm;
     border-radius:  10px;
-    padding: 3.33%;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .img-responsive {
