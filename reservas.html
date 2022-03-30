@@ -4,96 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <title>Sound Garden - Reservas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Gardens - Painel Administrativo</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class=" d-flex justify-content-center align-items-center">
-        <a href="index.html">
-            <img src="img/Sound-logo-white (1).png" width="300" alt="">
-        </a>
-    </header>
-    <main>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="remove" class="text-danger bg-dark flex-column flex-shrink-0 p-0 col-2">
 
-
-        <!--Cards eventos-->
-        <section class="full">
-            <div class="container text-center">
-                <h2>Todas as Reservas</h2>
-            </div>
-            <div class="container d-flex justify-content-center align-items-center flex-column flex-wrap"
-                style="margin-bottom: 25px;">
-                <div class="card" style="width: 18rem; margin-bottom: 5px;">
-                    <div class="card-header">
-                        Nome do evento
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="name">Nome cliente: </li>
-                        <li class="list-group-item" id="email">E-mail: </li>
-                        <li class="list-group-item" id="qtd">Quantidade: </li>
-                    </ul>
-                </div>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button"
-                        class="border-dark btn bg-dark text-danger btn-outline-primary">Deletar</button>
-                    <a href="admin.html" class="border-dark btn text-dark btn-outline-primary">Voltar</a>
-                </div>
-            </div>
-
-            <div class="container d-flex justify-content-center align-items-center flex-column flex-wrap">
-                <div class="card" style="width: 18rem; margin-bottom: 5px;">
-                    <div class="card-header">
-                        Nome do evento
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Nome cliente</li>
-                        <li class="list-group-item">E-mail</li>
-                        <li class="list-group-item">Quantidade</li>
-                    </ul>
-                </div>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button"
-                        class="border-dark btn bg-dark text-danger btn-outline-primary">Deletar</button>
-                    <a href="admin.html" class="border-dark text-dark btn btn-outline-primary">Voltar</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <footer style="margin-top: 10px;">
-        <div class="container d-flex justify-content-center align-items-center">
-            <a href="#">
-                <img src="img/Sound-logo-white (1).png" width="200px" alt="">
-            </a>
-            <nav>
-                <ul>
-                    <li>
-                        <a class="foot" href="eventos.html">eventos</a>
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-4 px-5">
+                        <img src="img/Sound-logo.png" alt="Logotipo do Site - Guitarra" class="img-responsive">
+                    </span>
+                </a>
+                <p class="text-center">painel administrativo</p>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="admin.html" class=" nav-link link-dark text-danger" aria-current="page">
+                            Eventos
+                        </a>
                     </li>
                     <li>
-                        <a class="foot" href="admin.html">painel administrativo</a>
+                        <a href="reservas.html" class="nav-link active">
+                            Reservas
+                        </a>
                     </li>
                 </ul>
-            </nav>
+            </aside>
+            <main style="margin-left: 30px;" class="col-7  p-10 ">
+                <div class="my-5" style="margin-left: 25px;">
+                    <h1>Gerenciamento de eventos</h1>
+                    <br><br>
+                    <div class="d-flex  align-content-center">
+                        <a href="index.html" style="margin-bottom: 13px;"
+                            class="btn btn-secondary border-0 w-20">Página Inicial</a>
+                        <a href="cadastro-evento.html" style="margin-bottom: 13px;  margin-left: 10px;"
+                            class=" btn btn-secondary border-0 w-20">Novo Evento</a>
+                    </div>
+                </div>
+                <div class="bd-example">
+                    <table class="table-responsive w-100 p-2">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col" id="remove">Nome</th>
+                                <th scope="col" id="remove">Evento</th>
+                                <th scope="col">Quantidade</th>
+                            </tr>
+                        </thead>
+                       
+                    </table>
+                </div>
+            </main>
         </div>
+    </div>
+
+    <footer style="margin-top: 10px;">
+        
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="./js/reservas.js"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="/js/admin.js"></script>
 </body>
 
 </html>

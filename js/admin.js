@@ -19,10 +19,6 @@ let listEvents = async () => {
                                 <td id="remove">${item.attractions}</td>
                                 <td>
                                     <a href="reserva.html?id=${item._id}" class="btn btn-dark w-100">ver reserva</a>
-                                    <a href="ver-reserva.html?id=${item._id}" class="btn btn-dark">ver reservas</a>
-                                    <a href="editar-evento.html?id=${item._id}" class="btn btn-secondary">editar</a>
-                                    <a href="excluir-evento.html?id=${item._id}" class="btn btn-danger">excluir</a>
-                                    <a href="reservas.html?id=${item._id}" class="btn btn-dark w-100">ver reservas</a>
                                     <a href="editar-evento.html?id=${item._id}" class="btn btn-secondary w-100">editar</a>
                                     <a href="excluir-evento.html?id=${item._id}" class="btn btn-danger w-100">excluir</a>
                                 </td>
