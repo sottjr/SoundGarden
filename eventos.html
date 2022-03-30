@@ -17,10 +17,10 @@
 <body>
     <header class=" d-flex justify-content-center align-items-center">
         <a href="index.html">
-            <img src="img/Sound-logo (1).png" width="300" alt="">
+            <img src="img/Sound-logo-white (1).png" width="300" alt="">
         </a>
     </header>
-    <main>
+    <main class="d-flex justify-content-center flex-column">
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -47,12 +47,12 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="validationCustom04" class="form-label">Evento</label>
+                                <label for="validationCustom04" class="form-label">Ingressos</label>
                                 <select class="form-select" id="validationCustom04" required>
-                                    <option selected disabled value="1">Escolha:</option>
-                                    <option selected value="1">O Rappa</option>
-                                    <option selected value="2">Lollapalooza</option>
-                                    <option selected value="3">Iron Maiden</option>
+                                    <option selected disabled value="1">Selecione um evento:</option>
+                                    <option selected value="">Evento 1</option>
+                                    <option selected value="">Evento 2</option>
+                                    <option selected value="">Evento 3</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
@@ -60,19 +60,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="validationCustom04" class="form-label">Quantidade</label>
-                                <select class="form-select" id="validationCustom04" required>
-                                    <option selected disabled value="1">Escolha:</option>
-                                    <option selected value="1">1</option>
-                                    <option selected value="2">2</option>
-                                    <option selected value="3">3</option>
-                                    <option selected value="4">4</option>
-                                    <option selected value="5">5</option>
-                                    <option selected value="5">6</option>
-                                    <option selected value="5">7</option>
-                                    <option selected value="5">8</option>
-                                    <option selected value="5">9</option>
-                                    <option selected value="5">10</option>
-                                </select>
+                                <input type="number" name="Quantidade" class="form-control" id="validationCustom04">
                                 <div class="invalid-feedback">
                                     Selecione algo válido
                                 </div>
@@ -92,7 +80,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
-                        <button type="button" class="btn btn-primary">concluir reserva</button>
+                        <button type="button" class="btn bg border-0 bg-dark btn-primary">concluir reserva</button>
                     </div>
                 </div>
             </div>
@@ -115,7 +103,7 @@
                             dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                             nobis in inventore tenetur asperiores.</p>
                         <hr>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary bg-dark border-dark" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             reservar ingresso
                         </button>
@@ -133,18 +121,14 @@
                             dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
                             nobis in inventore tenetur asperiores.</p>
                         <hr>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary bg-dark border-dark" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             reservar ingresso
                         </button>
                         <hr>
                     </article>
                 </div>
-                <div class="container d-flex justify-content-center align-items-center flex-wrap">
-
-
-
-                </div>
+            </div>
         </section>
         <!--Section-->
         <section class="full d-flex justify-content-center align-items-center"
@@ -181,7 +165,7 @@
     <footer>
         <div class="container d-flex justify-content-center align-items-center">
             <a href="#">
-                <img src="img/Sound-logo-black (1).png" width="200px" alt="">
+                <img src="img/Sound-logo-white (1).png" width="200px" alt="">
             </a>
             <nav>
                 <ul>
