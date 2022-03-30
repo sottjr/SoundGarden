@@ -9,6 +9,7 @@ const ID_ATUAL = window.location.href.split('=')[1]
 const form = document.querySelector('#form')
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 
+
 let resposta = async () => {
 
     const resposta1 = await fetch(`${BASE_URL}/events/${ID_ATUAL}`)

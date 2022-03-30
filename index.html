@@ -35,12 +35,12 @@
                         <img style="border-radius: 20px;" src="/img/1.png" class="d-block w-auto" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <a href="/form-banner.html"><img style="border-radius: 20px;" src="/img/2.png" class="d-flex w-auto"
-                                alt="..."></a>
+                        <a href="/form-banner.html"><img style="border-radius: 20px;" src="/img/2.png"
+                                class="d-flex w-auto" alt="..."></a>
                     </div>
                     <div class="carousel-item">
-                        <a href=""><img src="/img/3.png" style="border-radius: 20px;"
-                                class="d-flex w-auto" alt="..."></a>
+                        <a href=""><img src="/img/3.png" style="border-radius: 20px;" class="d-flex w-auto"
+                                alt="..."></a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -67,22 +67,22 @@
                     <div class="modal-body">
                         <form style="position: inherit;" class="row g-3 needs-validation" novalidate>
                             <div class="col-md-6">
-                                <label for="validationCustom01" class="form-label" id="name">Nome completo</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                <label for="validationCustom01" class="form-label">Nome completo</label>
+                                <input type="text" class="form-control" id="nome" value="" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="validationCustom05" class="form-label" id="email">E-mail</label>
-                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <label for="validationCustom05" class="form-label">E-mail</label>
+                                <input type="text" class="form-control" id="email" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div class="col-md-6" id="options">
                                 <label for="validationCustom04" class="form-label">Ingressos</label>
-                                <select class="form-select" id="nameEvent" required>
+                                <select class="form-select" id="evento" required>
                                     <option selected disabled value="1">Selecione um evento:</option>
                                     <option selected value="">Evento 1</option>
                                     <option selected value="">Evento 2</option>
@@ -94,7 +94,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="validationCustom04" class="form-label">Quantidade</label>
-                                <input type="number" name="Quantidade" class="form-control" id="qtdIngressos">
+                                <input type="number" name="Quantidade" class="form-control" id="quantidade">
                                 <div class="invalid-feedback">
                                     Selecione algo válido
                                 </div>
@@ -114,7 +114,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
-                        <button type="button" class="btn bg border-0 bg-dark btn-primary">concluir reserva</button>
+                        <button type="button" id="btSend" class="btn bg border-0 bg-dark btn-primary">concluir
+                            reserva</button>
                     </div>
                 </div>
             </div>
