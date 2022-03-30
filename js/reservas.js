@@ -44,8 +44,8 @@ console.log(asnwerJson);
 
         table.innerHTML += `
                <tr>
-                                   <th scope="row">${index + 1}</th>
-                                   <td>${item.owner_name}</td>
+                                   <th scope="row" style="padding-right: 25px">${index + 1}</th>
+                                   <td style="padding-right: 25px">${item.owner_name}</td>
                                    <td id="remove">${item.owner_email}</td>
                                    <td id="remove">${item.number_tickets}</td>
                                    <td><a href="reserva.html?id=${item._id}" class="btn btn-danger w-20">excluir</a></td>
