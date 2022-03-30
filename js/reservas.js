@@ -48,8 +48,9 @@ console.log(asnwerJson);
                                    <td>${item.owner_name}</td>
                                    <td id="remove">${item.owner_email}</td>
                                    <td id="remove">${item.number_tickets}</td>
-                                    
+                                   <td><a href="reserva.html?id=${item._id}" class="btn btn-danger w-20">excluir</a></td>
                                </tr>
+                               
         
         
         
