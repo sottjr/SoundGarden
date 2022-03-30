@@ -25,13 +25,13 @@ form.onsubmit = async (evento) => {
 
     const options = {
         method: 'POST',
-        body: JSON.stringify(newObject),
         body: raw,
+        headers: {
+            "content-type": "application/json"
+        },
         redirect: "follow",
     };
-
-
-    const answer = await fetch(`${BASE_URL}/events`, options)
+    const answer = await fetch(`${BASE_URL}/bookings`, options)
     const contentAnswer = await answer.json();
     return window.location.href = 'admin.html'
 
