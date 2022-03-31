@@ -5,20 +5,31 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content:center;
-        
-    } #mobileSession {
+        justify-content: center;
+
+    }
+
+    #mobileSession {
         flex-direction: column;
-    }  #remove {
+    }
+
+    #remove {
         display: none;
-    }  aside {
+    }
+
+    aside {
         display: none;
-    } p {
+    }
+
+    p {
         font-size: 21px;
         text-decoration: rgb(199, 195, 195);
-        font-weight:500;
-    } .removeAtracao {
-        display: none;;
+        font-weight: 500;
+    }
+
+    .removeAtracao {
+        display: none;
+        ;
     }
 }
 
@@ -26,14 +37,29 @@
     background-color: #000000;
 }
 
+#nomeData {
+    height: 89px;
+    text-align: center;
 
+}
 
-body{
-   display: flex;
+#atracoes {
+    margin-top: 25px;
+    height: 100px;
+    text-align: center;
+}
+
+#descricao {
+    text-align: center;
+    height: 100px;
+}
+
+body {
+    display: flex;
     font-family: 'Questrial', sans-serif;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
 .foot {
@@ -51,10 +77,9 @@ body{
 
 
 .hover:hover {
-    transition: 01.0s;
-    background-color:#C2185B;
-    border: 0cm;
-    border-radius:  10px;
+    transition: 1.0s;
+    background-color: #C2185B;
+    border-radius: 25px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -69,6 +94,7 @@ header {
     width: 100%;
     background-color: rgb(0, 0, 0);
 }
+
 aside {
     min-height: 100vh;
 }
@@ -77,7 +103,7 @@ aside {
     background-color: #C2185B;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #C2185B;
     border-color: #C2185B;
 }
@@ -86,7 +112,7 @@ main.login {
     width: 400px;
 }
 
-section.full{
+section.full {
     width: 100%;
     min-height: 80vh;
     padding: 50px 0;
@@ -99,14 +125,14 @@ article.evento {
 footer {
     background-color: #000000;
     text-decoration: #ffffff;
-    
+
 }
 
-footer nav ul{
+footer nav ul {
     list-style: none;
     display: flex;
 }
 
-footer nav ul li  {
+footer nav ul li {
     padding: 10px;
 }
