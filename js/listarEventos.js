@@ -18,9 +18,9 @@ body.onload = async () => {
             <h3 id="nomeData">
                     ${conteudoResposta[i].name} - ${finalDate.getDate()}/${finalDate.getMonth() + 1}/${finalDate.getFullYear()}
                 </h3>
-                <h4 id="atracoes">
+                <h4 style="margin-top: 50px" id="atracoes">
                     ${conteudoResposta[i].attractions}
-                </h6>
+                </h4>
                 <p id="descricao">
                     ${conteudoResposta[i].description}
                 </p>
