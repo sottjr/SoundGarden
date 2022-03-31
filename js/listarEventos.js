@@ -12,17 +12,19 @@ body.onload = async () => {
 
     for (let i = 1; i < 1000; i++) {
         divEventos.innerHTML += `
-            <article class="evento card p-5 m-3">
-                <h2 id="nomeData">
+            <article class="d=flex flex-column evento card p-5 m-3 w-50">
+            
+            <h3 id="nomeData">
                     ${conteudoResposta[i].name} - ${conteudoResposta[i].scheduled}
-                </h2>
-                <h4 id="atracoes">
+                </h3>
+                <h6 id="atracoes">
                     ${conteudoResposta[i].attractions}
-                </h4>
+                </h6>
                 <p id="descricao">
                     ${conteudoResposta[i].description}
                 </p>
-                <button type="button"  data-id="${conteudoResposta[i]._id}" class="btn btn-primary bg-dark border-dark" data-bs-toggle="modal"
+                
+                <button type="button"  data-id="${conteudoResposta[i]._id}" class="btn justify-content-around btn-primary bg-dark border-dark" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             reservar ingresso
                         </button>
