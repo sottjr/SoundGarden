@@ -15,7 +15,7 @@ body.onload = async () => {
             <article class="d=flex flex-column evento card p-5 m-3 w-50">
             
             <h3 id="nomeData">
-                    ${conteudoResposta[i].name} Data:  ${conteudoResposta[i].scheduled}
+                    ${conteudoResposta[i].name} <hr> Data:  ${conteudoResposta[i].scheduled}
                 </h3>
                 <h4 id="atracoes">
                     ${conteudoResposta[i].attractions}
@@ -24,7 +24,7 @@ body.onload = async () => {
                     ${conteudoResposta[i].description}
                 </p>
                 
-                <button type="button" id="bottomClick" data-id="${conteudoResposta[i]._id}" class="btn justify-content-around btn-primary bg-dark border-dark" data-bs-toggle="modal"
+                <button type="button" id="btn" id="bottomClick" data-id="${conteudoResposta[i]._id}" class="hover btn justify-content-around btn-primary bg-dark border-dark" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             reservar ingresso
                         </button>
