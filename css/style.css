@@ -31,6 +31,14 @@
         display: none;
         ;
     }
+    td {
+        min-width: 144px;
+    }
+    .navegation {
+        min-width: max-content;
+        padding: 5px;
+        background-color: #cc1b36d8;
+    }
 }
 
 .blackB {
