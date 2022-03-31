@@ -25,7 +25,7 @@ body.onload = async () => {
                     ${conteudoResposta[i].description}
                 </p>
                 <p id="eventoId" style="display:none;">${conteudoResposta[i]._id}</p>
-                <a href="#?id=${conteudoResposta[i]._id}" id="botao-reservar" event-id="${conteudoResposta[i]._id}" class="btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</a>
+                <a href="#?id=${conteudoResposta[i]._id}" id="botao-reservar" event-id="${conteudoResposta[i]._id}" class="hover btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</a>
 
             </article>
         `;

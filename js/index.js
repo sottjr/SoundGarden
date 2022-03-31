@@ -20,13 +20,8 @@ const answer = await fetch(BASE_URL, { method: "GET", redirect: 'follow' })
 contentAnswer.forEach((item, index) => {
 option.innerHTML += `
 <option selected value="">${index, item.name}</option>
-
-
-`
-    
-})
-
-}
+`    
+})}
 
 // form.onsubmit = async (evento) => {
 

@@ -16,7 +16,7 @@ body.onload = async () => {
         <article  class="bg-dark text-light bg-gradient evento card d-flex justify-content-between align-content-center p-5 m-3" style="min-height: 500px; border-radius:20px;">
         <div>    
         <h2 id="nomeData">${conteudoResposta[i].name}</h2><hr>
-            <h6 id="atracoes" class="">${conteudoResposta[i].attractions}</h6>
+            <h5 id="atracoes" class="">${conteudoResposta[i].attractions}</h5>
             <p id="descricao" style="text-overflow: ellipsis;">${conteudoResposta[i].description}</p>
             </div>  
                <button type="button" class="hover btn btn-primary bg-light text-dark border-dark" data-bs-toggle="modal"
