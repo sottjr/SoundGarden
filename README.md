@@ -1,21 +1,3 @@
-# SoundGarden
+![image](https://user-images.githubusercontent.com/88943961/161161178-9e5ebaa3-77b9-44fd-8bd1-c9aae59121e9.png)
 
-![image](https://user-images.githubusercontent.com/88943961/160450092-592c8e3b-de1a-4560-ba7c-6e2976459026.png)
-
-excluir-evento.html
-{#btDelete} -> excluir para sempre
-
-//index.html
-{#btCompletReserv} -> botão concluir reserva {modal}
-
-//eventos.html
-{#btcompletReserv} -> botão concluir reserva {modal}
-
-//cadastro-evento.html
-{#btSend}
-
-//editar-evento.html
-{#btSend}
-
-//form-banner.html
-{#btCompletReserv}
+![image](https://user-images.githubusercontent.com/88943961/161161326-a9c91395-cdb2-420b-bfaa-6592863da117.png)
