@@ -88,6 +88,6 @@ form.onsubmit = async event => {
         alert('Event tickets booked successfully!')
     } catch (error) {
         console.log(error);
-        alert('Error!!!');
+        alert('Error!!!!');
     };
 };}
