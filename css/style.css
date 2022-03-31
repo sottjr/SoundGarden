@@ -17,6 +17,8 @@
         font-size: 21px;
         text-decoration: rgb(199, 195, 195);
         font-weight:500;
+    } .removeAtracao {
+        display: none;;
     }
 }
 
