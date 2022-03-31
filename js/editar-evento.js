@@ -10,6 +10,9 @@ let btSend = document.querySelector("#btSend");
 let form = document.querySelector("form");
 
 
+
+
+
 let receive = async () => {
     const answer = await fetch(`${BASE_URL}/${ID_ATUAL}`,
         {
@@ -25,7 +28,7 @@ inLinkImg.value = contentAnswer.poster
 inAtracoes.value = contentAnswer.attractions
 inDescription.value = contentAnswer.description
 //new Date(inDate.value).toISOString()
-inDate.value = new Date(contentAnswer.scheduled).toISOString();
+inDate.value = contentAnswer.scheduled.split("").slice(0,16).join("")
 inLotacao.value = parseInt(contentAnswer.number_tickets)
 
 }

@@ -10,13 +10,20 @@ body.onload = async () => {
 
     const { _id, name, attractions, scheduled, description } = await conteudoResposta;
 
+    const formataData = (data) => {
+        let d = data.split('');
+        let dd = d.slice(8,10).join('') + '/' + d.slice(5,7).join('') + '/' + d.slice(0,4).join('');
+        let dt = d.slice(11,16).join('')
+        return `${dd}`
+    };
+
     for (let i = 0; i < 100; i++) {
-        const finalDate = new Date(conteudoResposta[i].scheduled);
+        const finalDate = formataData(conteudoResposta[i].scheduled)
         divEventos.innerHTML += `
             <article class="d=flex flex-column evento card p-5 m-3 w-50">
             
             <h3 id="nomeData">
-                    ${conteudoResposta[i].name} - ${finalDate.getDate()}/${finalDate.getMonth() + 1}/${finalDate.getFullYear()}
+                    ${conteudoResposta[i].name} - ${finalDate}
                 </h3>
                 <h4 style="margin-top: 50px" id="atracoes">
                     ${conteudoResposta[i].attractions}
@@ -24,13 +31,13 @@ body.onload = async () => {
                 <p id="descricao">
                     ${conteudoResposta[i].description}
                 </p>
+        
                 <p id="eventoId" style="display:none;">${conteudoResposta[i]._id}</p>
-                <a href="#?id=${conteudoResposta[i]._id}" id="botao-reservar" event-id="${conteudoResposta[i]._id}" class="hover btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</a>
+                <a href="#?id=${conteudoResposta[i]._id}" onclick="click(this)" id="botao-reservar" event-id="${conteudoResposta[i]._id}" class="hover btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</a>
 
             </article>
         `;
 
-        click()
     }
 }
 
@@ -52,6 +59,8 @@ const emailUser = document.querySelector("#validationCustom05");
 const form1 = document.querySelector("form")
 const botaoAbrirModal = document.querySelectorAll("#botao-reservar")
 const send = document.querySelector("#btSend");
+const pagrafoSalvadorDaPatria = document.querySelector("#pagrafoSalvadorDaPatria")
+const reserveSeuIn = document.querySelector("#exampleModalLabel")
 
 
 
@@ -62,27 +71,32 @@ const send = document.querySelector("#btSend");
 //         click2()
 //     })
 // })}
-function click() {
-    botaoAbrirModal.forEach((botao) => {
-        botao.addEventListener(mousedown, (e) => {
-            form1.setAttribute("event-id", e.target.getAttribute("event-id"));
-        })
 
-    })
+function click(AQUI) {
+    const vaiReceberId = AQUI.getAttribute("event-id"); 
+    reserveSeuIn.setAttribute("event-id", vaiReceberId);
+
+//     botaoAbrirModal.forEach((botao) => {
+//         botao.addEventListener(mousedown, (e) => {
+//             form1.setAttribute("event-id", e.target.getAttribute("event-id"));
+//         })
+
+//     })
 }
 
 
 
     const formModal = document.querySelectorAll("form");
-    formModal.forEach((form) => {
-        form.onsubmit = async (evento) => {
+    formModal.forEach((form1) => {
+        form1.onsubmit = async (evento) => {
             evento.preventDefault();
             try {
                 const newBooking = {
                                 owner_name: nameUser.value,
                                 owner_email: emailUser.value,
                                 number_tickets: parseInt(ticketsUser.value),
-                                event_id: send.getAttribute('data-id'),
+                                // event_id: form1.getAttribute('data-id'),
+                                event_id: pagrafoSalvadorDaPatria.value,
                             };
                             const options = {
                                 method: "POST",
@@ -98,7 +112,6 @@ function click() {
                             console.log(conteudoResposta1);
                             alert('Event tickets booked successfully!') 
             } catch (erro) {
-                console.log(erro);
                 alert("erro")
             }
         } 

@@ -1,6 +1,15 @@
 const table = document.querySelector("table");
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com"
 
+
+const formataData = (data) => {
+    let d = data.split('');
+    let dd = d.slice(8,10).join('') + '/' + d.slice(5,7).join('') + '/' + d.slice(0,4).join('');
+    let dt = d.slice(11,16).join('')
+    return `${dd} ${dt}`
+};
+
+
 let listEvents = async () => {
 
     //Requisição
@@ -14,7 +23,7 @@ let listEvents = async () => {
             `
         <tr>
                                 <th scope="row">${index + 1}</th>
-                                <td id="remove">${item.scheduled}</td>
+                                <td id="remove">${formataData(item.scheduled)}</td>
                                 <td>${item.name}</td>
                                 <td id="remove">${item.attractions}</td>
                                 <td>

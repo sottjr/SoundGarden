@@ -18,7 +18,7 @@ let resposta = async () => {
     inBanner.value = respostaJson.poster
     inAtracoes.value = respostaJson.attractions
     inDescripition.value = respostaJson.description
-    inDate.value = respostaJson.scheduled
+    inDate.value = respostaJson.scheduled.split("").slice(0,16).join("")
     inLotacao.value = respostaJson.number_tickets
 
 
