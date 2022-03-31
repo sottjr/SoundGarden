@@ -80,7 +80,6 @@ function click(AQUI) {
 //         botao.addEventListener(mousedown, (e) => {
 //             form1.setAttribute("event-id", e.target.getAttribute("event-id"));
 //         })
-
 //     })
 }
 
@@ -117,29 +116,4 @@ function click(AQUI) {
         } 
     })
 
-    // form1.onsubmit = async event => {
-    //     event.preventDefault();
-    //     try {
-    //         const newBooking = {
-    //             owner_name: nameUser.value,
-    //             owner_email: emailUser.value,
-    //             number_tickets: parseInt(ticketsUser.value),
-    //             event_id: send.getAttribute('data-id'),
-    //         };
-    //         const options = {
-    //             method: "POST",
-    //             body: JSON.stringify(newBooking),
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //         };
-    //         await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
-    //         console.log(newBooking);
-    //         console.log(data - id);
-    //         alert('Event tickets booked successfully!')
-    //     } catch (error) {
-    //         console.log(error);
-    //         alert('Error!!!!');
-    //     };
-    // };
-
+  
