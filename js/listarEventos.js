@@ -10,14 +10,14 @@ body.onload = async () => {
 
     const { _id, name, attractions, scheduled, description } = await conteudoResposta;
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 100; i++) {
         divEventos.innerHTML += `
             <article class="d=flex flex-column evento card p-5 m-3 w-50">
             
             <h3 id="nomeData">
                     ${conteudoResposta[i].name} Data:  ${conteudoResposta[i].scheduled}
                 </h3>
-                <h6 id="atracoes">
+                <h4 id="atracoes">
                     ${conteudoResposta[i].attractions}
                 </h6>
                 <p id="descricao">
