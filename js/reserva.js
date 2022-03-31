@@ -39,6 +39,4 @@ alert("Reserva excluída!")
 return window.location.href = 'admin.html'
 }
 
-
-
-    //window.history.go(-1); // volta para a página anterior, igual back()
+//window.history.go(-1); // volta para a página anterior, igual back()
