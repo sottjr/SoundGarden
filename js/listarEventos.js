@@ -30,7 +30,7 @@ body.onload = async () => {
             </article>
         `;
 
-    click()
+        click()
     }
 }
 
@@ -49,45 +49,84 @@ body.onload = async () => {
 const nameUser = document.querySelector('#validationCustom01');
 const ticketsUser = document.querySelector("#validationCustom04");
 const emailUser = document.querySelector("#validationCustom05");
-const form = document.querySelector("form")
+const form1 = document.querySelector("form")
 const botaoAbrirModal = document.querySelectorAll("#botao-reservar")
 const send = document.querySelector("#btSend");
 
 
 
-function click(){
-botaoAbrirModal.forEach(botao => {
-    botao.addEventListener("mousedown", (e) => {
-        form.setAttribute("event-id", e.target.getAttribute("event-id"));
-        click2()
+// function click(){
+// botaoAbrirModal.forEach(botao => {
+//     botao.addEventListener("mousedown", (e) => {
+//         form.setAttribute("event-id", e.target.getAttribute("event-id"));
+//         click2()
+//     })
+// })}
+function click() {
+    botaoAbrirModal.forEach((botao) => {
+        botao.addEventListener(mousedown, (e) => {
+            form1.setAttribute("event-id", e.target.getAttribute("event-id"));
+        })
+
     })
-})}
+}
 
 
 
-function click2() {
-form.onsubmit = async event => {
-    event.preventDefault();
-    try {
-        const newBooking = {
-            owner_name: nameUser.value,
-            owner_email: emailUser.value,
-            number_tickets: parseInt(ticketsUser.value),
-            event_id: send.getAttribute('data-id'),
-        };
-        const options = {
-            method: "POST",
-            body: JSON.stringify(newBooking),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
-        await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
-        console.log(newBooking);
-        console.log(data-id);
-        alert('Event tickets booked successfully!')
-    } catch (error) {
-        console.log(error);
-        alert('Error!!!!');
-    };
-};}
+    const formModal = document.querySelectorAll("form");
+    formModal.forEach((form) => {
+        form.onsubmit = async (evento) => {
+            evento.preventDefault();
+            try {
+                const newBooking = {
+                                owner_name: nameUser.value,
+                                owner_email: emailUser.value,
+                                number_tickets: parseInt(ticketsUser.value),
+                                event_id: send.getAttribute('data-id'),
+                            };
+                            const options = {
+                                method: "POST",
+                                body: JSON.stringify(newBooking),
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                            };
+                            const resposta1 = await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
+                            const conteudoResposta1 = await resposta1.json();
+                            console.log(newBooking);
+                            console.log(resposta1);
+                            console.log(conteudoResposta1);
+                            alert('Event tickets booked successfully!') 
+            } catch (erro) {
+                console.log(erro);
+                alert("erro")
+            }
+        } 
+    })
+
+    // form1.onsubmit = async event => {
+    //     event.preventDefault();
+    //     try {
+    //         const newBooking = {
+    //             owner_name: nameUser.value,
+    //             owner_email: emailUser.value,
+    //             number_tickets: parseInt(ticketsUser.value),
+    //             event_id: send.getAttribute('data-id'),
+    //         };
+    //         const options = {
+    //             method: "POST",
+    //             body: JSON.stringify(newBooking),
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //         };
+    //         await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
+    //         console.log(newBooking);
+    //         console.log(data - id);
+    //         alert('Event tickets booked successfully!')
+    //     } catch (error) {
+    //         console.log(error);
+    //         alert('Error!!!!');
+    //     };
+    // };
+
