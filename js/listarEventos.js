@@ -10,12 +10,8 @@ body.onload = async () => {
 
     const { _id, name, attractions, scheduled, description } = await conteudoResposta;
 
-<<<<<<< HEAD
-    for (let i = 0; i < 1000; i++) {
-        const finalDate = new Date(conteudoResposta[i].scheduled);
-=======
     for (let i = 0; i < 100; i++) {
->>>>>>> c0325725d26eb3d7187c6eb4abce301be40c857b
+        const finalDate = new Date(conteudoResposta[i].scheduled);
         divEventos.innerHTML += `
             <article class="d=flex flex-column evento card p-5 m-3 w-50">
             
