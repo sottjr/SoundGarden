@@ -15,7 +15,7 @@ body.onload = async () => {
             <article class="d=flex flex-column evento card p-5 m-3 w-50">
             
             <h3 id="nomeData">
-                    ${conteudoResposta[i].name} - ${conteudoResposta[i].scheduled}
+                    ${conteudoResposta[i].name} Data:  ${conteudoResposta[i].scheduled}
                 </h3>
                 <h6 id="atracoes">
                     ${conteudoResposta[i].attractions}
@@ -24,10 +24,42 @@ body.onload = async () => {
                     ${conteudoResposta[i].description}
                 </p>
                 
-                <button type="button"  data-id="${conteudoResposta[i]._id}" class="btn justify-content-around btn-primary bg-dark border-dark" data-bs-toggle="modal"
+                <button type="button" id="bottomClick" data-id="${conteudoResposta[i]._id}" class="btn justify-content-around btn-primary bg-dark border-dark" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             reservar ingresso
                         </button>
             </article>
         `;
-    }}
+
+
+    }
+}
+
+
+//cadastro
+// var createButton = document.querySelector("#bottomClick")
+// var dataId = createButton.getAttribute("data-id");
+// console.log(dataId);
+
+var inName = document.querySelector("#name");
+var inTickets= document.querySelector("#tickets");
+var inEmail = document.querySelector("#validationCustom05");
+var btSend = document.querySelector("#btSend");
+var form = document.querySelector("form")
+
+
+
+
+form.onsubmit = async (evento) => {
+    evento.preventDefault();
+
+    const NewObject = {
+        owner_name: inputNome.value,
+        owner_email: inputEmail.value,
+        number_tickets: inputIngresso.value,
+        event_id: idAtual
+
+    }
+
+
+}

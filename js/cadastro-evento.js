@@ -1,13 +1,13 @@
 //cadastro-evento.html
 
-const inName = document.querySelector("#nome");
-const inAtracoes = document.querySelector("#atracoes");
-const inDescripition = document.querySelector("#descricao");
-const inDate = document.querySelector("#data");
-const inLotacao = document.querySelector("#lotacao");
-const inLinkImg = document.querySelector("#poster")
-const btSend = document.querySelector("#btSend");
-const form = document.querySelector("form")
+var inName = document.querySelector("#nome");
+var inAtracoes = document.querySelector("#atracoes");
+var inDescripition = document.querySelector("#descricao");
+var inDate = document.querySelector("#data");
+var inLotacao = document.querySelector("#lotacao");
+var inLinkImg = document.querySelector("#poster")
+var btSend = document.querySelector("#btSend");
+var form = document.querySelector("form")
 
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 

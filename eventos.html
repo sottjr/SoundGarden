@@ -31,10 +31,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+
+
                         <form style="position: inherit;" class="row g-3 needs-validation" novalidate>
                             <div class="col-md-6">
                                 <label for="validationCustom01" class="form-label">Nome completo</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                <input type="text" class="form-control" id="validationCustom01" value="" id="name" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -46,21 +48,10 @@
                                     Please provide a valid zip.
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="validationCustom04" class="form-label">Ingressos</label>
-                                <select class="form-select" id="validationCustom04" required>
-                                    <option selected disabled value="1">Selecione um evento:</option>
-                                    <option selected value="">Evento 1</option>
-                                    <option selected value="">Evento 2</option>
-                                    <option selected value="">Evento 3</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid state.
-                                </div>
-                            </div>
-                            <div class="col-md-6">
+                            
+                            <div class="col-md-6 w-100">
                                 <label for="validationCustom04" class="form-label">Quantidade</label>
-                                <input type="number" name="Quantidade" class="form-control" id="validationCustom04">
+                                <input type="number" name="Quantidade" class="form-control" id="validationCustom04" id="tickets">
                                 <div class="invalid-feedback">
                                     Selecione algo válido
                                 </div>
@@ -74,13 +65,16 @@
                                     <div class="invalid-feedback">
                                         You must agree before submitting.
                                     </div>
+                                   
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
+                                        <button type="submit" class="btn bg border-0 bg-dark btn-primary" id="btSend">concluir reserva</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
-                        <button type="button" class="btn bg border-0 bg-dark btn-primary">concluir reserva</button>
+
+                        
                     </div>
                 </div>
             </div>
