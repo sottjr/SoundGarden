@@ -30,9 +30,11 @@
     .removeAtracao {
         display: none;
     }
+
     td {
         min-width: 144px;
     }
+
     .navegation {
         min-width: max-content;
         padding: 5px;
