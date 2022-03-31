@@ -29,7 +29,6 @@
 
     .removeAtracao {
         display: none;
-        ;
     }
     td {
         min-width: 144px;
@@ -43,6 +42,12 @@
 
 .blackB {
     background-color: #000000;
+}
+
+.navegation {
+    min-width: max-content;
+    padding: 5px;
+    background-color: #cc1b36d8;
 }
 
 #nomeData {
