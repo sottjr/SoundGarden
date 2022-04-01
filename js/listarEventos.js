@@ -12,12 +12,12 @@ body.onload = async () => {
 
     const formataData = (data) => {
         let d = data.split('');
-        let dd = d.slice(8,10).join('') + '/' + d.slice(5,7).join('') + '/' + d.slice(0,4).join('');
-        let dt = d.slice(11,16).join('')
+        let dd = d.slice(8, 10).join('') + '/' + d.slice(5, 7).join('') + '/' + d.slice(0, 4).join('');
+        let dt = d.slice(11, 16).join('')
         return `${dd}`
     };
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
         const finalDate = formataData(conteudoResposta[i].scheduled)
         divEventos.innerHTML += `
             <article class="d=flex flex-column evento card p-5 m-3 w-50">
@@ -31,9 +31,9 @@ body.onload = async () => {
                 <p id="descricao">
                     ${conteudoResposta[i].description}
                 </p>
+                <p id="pSalvador"></p>
         
-                <p id="eventoId" style="display:none;">${conteudoResposta[i]._id}</p>
-                <a href="#?id=${conteudoResposta[i]._id}" onclick="click(this)" id="botao-reservar" event-id="${conteudoResposta[i]._id}" class="hover btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</a>
+                <button data-bs-whatever="${conteudoResposta[i]._id}" data-id="${conteudoResposta[i]._id}" id="botao-reservar" event-id="${conteudoResposta[i]._id}" class="hover btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</button>
 
             </article>
         `;
@@ -42,78 +42,81 @@ body.onload = async () => {
 }
 
 
+var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    let recipient = button.getAttribute('data-bs-whatever')
+    // If necessary, you could initiate an AJAX request here
+    // and then do the updating in a callback.
+    const nameUser = document.querySelector('#validationCustom01');
+    const ticketsUser = document.querySelector("#validationCustom04");
+    const emailUser = document.querySelector("#validationCustom05");
+    const form = document.querySelector("form")
+    // const send = document.querySelector("#btSend");
 
-// {/* <a href="#?id=${conteudoResposta[i]._id}" eve id="botao"  class="btn justify-content-around open btn-primary bg-dark border-dark" data-bs-toggle="modal"
-//                             data-bs-target="#exampleModal">
-//                             reservar ingresso
-//                         </a> */}
-
-//cadastro
-// var createButton = document.querySelector("#bottomClick")
-// var dataId = createButton.getAttribute("data-id");
-// console.log(dataId);
-
-const nameUser = document.querySelector('#validationCustom01');
-const ticketsUser = document.querySelector("#validationCustom04");
-const emailUser = document.querySelector("#validationCustom05");
-const form1 = document.querySelector("form")
-const botaoAbrirModal = document.querySelectorAll("#botao-reservar")
-const send = document.querySelector("#btSend");
-const pagrafoSalvadorDaPatria = document.querySelector("#pagrafoSalvadorDaPatria")
-const reserveSeuIn = document.querySelector("#exampleModalLabel")
-
-
-
-// function click(){
-// botaoAbrirModal.forEach(botao => {
-//     botao.addEventListener("mousedown", (e) => {
-//         form.setAttribute("event-id", e.target.getAttribute("event-id"));
-//         click2()
-//     })
-// })}
-
-function click(AQUI) {
-    const vaiReceberId = AQUI.getAttribute("event-id"); 
-    reserveSeuIn.setAttribute("event-id", vaiReceberId);
-
-//     botaoAbrirModal.forEach((botao) => {
-//         botao.addEventListener(mousedown, (e) => {
-//             form1.setAttribute("event-id", e.target.getAttribute("event-id"));
-//         })
-//     })
-}
-
-
-
-    const formModal = document.querySelectorAll("form");
-    formModal.forEach((form1) => {
-        form1.onsubmit = async (evento) => {
-            evento.preventDefault();
-            try {
-                const newBooking = {
-                                owner_name: nameUser.value,
-                                owner_email: emailUser.value,
-                                number_tickets: parseInt(ticketsUser.value),
-                                // event_id: form1.getAttribute('data-id'),
-                                event_id: pagrafoSalvadorDaPatria.value,
-                            };
-                            const options = {
-                                method: "POST",
-                                body: JSON.stringify(newBooking),
-                                headers: {
-                                    "Content-Type": "application/json",
-                                },
-                            };
-                            const resposta1 = await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
+    form.onsubmit = async (evento) => {
+        evento.preventDefault();
+        try {
+            const newBooking = {
+                owner_name: nameUser.value,
+                owner_email: emailUser.value,
+                number_tickets: ticketsUser.value,
+                event_id: recipient,
+            };
+            const options = {
+                method: "POST",
+                body: JSON.stringify(newBooking),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+        };
+        const resposta1 = await fetch(`https://xp41-soundgarden-api.herokuapp.com/bookings`, options);
                             const conteudoResposta1 = await resposta1.json();
                             console.log(newBooking);
                             console.log(resposta1);
                             console.log(conteudoResposta1);
-                            alert('Event tickets booked successfully!') 
-            } catch (erro) {
-                alert("erro")
-            }
-        } 
-    })
+                            alert('Ingressos para eventos reservados com sucesso!')
+                            return window.location.href = "eventos.html"
+    } catch (erro) {
+        alert('Erro ao cadastrar, verifique os campos digitados!')
+    }
+    }
+})
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const nameUser = document.querySelector('#validationCustom01');
+// const ticketsUser = document.querySelector("#validationCustom04");
+// const emailUser = document.querySelector("#validationCustom05");
+// const form = document.querySelector("form")
+
+// const idButton = document.querySelectorAll("#botao-reservar")
+// const send = document.querySelector("#btSend");
+
+// const reserveSeuIn = document.querySelector("#modal-title")
+
+// idButton.forEach(element => {
+//     element.addEventListener("click", async () => {
+//         send.setAttribute("data-bs-whatever", element.getAttribute("data-bs-whatever"));
+
+//         const response2 = await fetch (`https://xp41-soundgarden-api.herokuapp.com/bookings`)
+//     })
+// })
