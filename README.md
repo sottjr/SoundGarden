@@ -1,6 +1,3 @@
-# SoundGarden
+![image](https://user-images.githubusercontent.com/88943961/161161178-9e5ebaa3-77b9-44fd-8bd1-c9aae59121e9.png)
 
-
-
-![image](https://user-images.githubusercontent.com/88943961/160739960-7cd66e84-931b-4514-aa87-6243da19abec.png)
-![image](https://user-images.githubusercontent.com/88943961/160739939-7adea2e1-bb15-49b4-a916-f409f0dac723.png)
+![image](https://user-images.githubusercontent.com/88943961/161161326-a9c91395-cdb2-420b-bfaa-6592863da117.png)
