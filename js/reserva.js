@@ -13,8 +13,8 @@
 
     let resposta = async () => {
 
-        const resposta1 = await fetch (`${BASE_URL}/bookings/${ID_ATUAL}`)
-        const respostaJson = await resposta1.json()
+        const respostaBookings = await fetch (`${BASE_URL}/bookings/${ID_ATUAL}`)
+        const respostaJson = await respostaBookings.json()
         inName.value = respostaJson.owner_name
         inEmail.value = respostaJson.owner_email
         tickets.value = respostaJson.number_tickets
